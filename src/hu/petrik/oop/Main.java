@@ -37,7 +37,16 @@ public class Main {
             System.out.println("Ismeretlen hiba történt a fájl beolvasásakor");
         }
 
+        likeOsztas();
+
         System.out.println(bejegyzesek.toString());
+    }
+
+    private static void likeOsztas() {
+        for (int i = 0; i < bejegyzesek.size()*20; i++) {
+            int bejegyzesSorszam = (int)(Math.random()*bejegyzesek.size());
+            bejegyzesek.get(bejegyzesSorszam).like();
+        }
     }
 
     private static void fajlBeolvasas(String fajlNev) throws IOException {
