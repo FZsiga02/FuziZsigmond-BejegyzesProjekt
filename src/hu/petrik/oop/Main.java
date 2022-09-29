@@ -11,8 +11,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Bejegyzes bejegyzes = new Bejegyzes("Kiss István", "Valami tartalom");
-        Bejegyzes bejegyzes2 = new Bejegyzes("Gipsz Jakab", "Ez is tartalom");
+        Bejegyzes bejegyzes = new Bejegyzes("István", "Valami tartalom");
+        Bejegyzes bejegyzes2 = new Bejegyzes("Jakab", "Ez is tartalom");
 
         bejegyzesek.add(bejegyzes);
         bejegyzesek.add(bejegyzes2);
@@ -33,9 +33,9 @@ public class Main {
         int db = sc.nextInt();
         for (int i = 0; i < db; i++) {
             System.out.print("Szerző: ");
-            String szerzo = sc.nextLine();
+            String szerzo = sc.next();
             System.out.print("Tartalom: ");
-            String tartalom = sc.nextLine();
+            String tartalom = sc.next();
             Bejegyzes bejegyzes = new Bejegyzes(szerzo, tartalom);
             bejegyzesek.add(bejegyzes);
         }
