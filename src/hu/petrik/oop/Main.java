@@ -38,8 +38,31 @@ public class Main {
         }
 
         likeOsztas();
+        szovegKeres();
 
         System.out.println(bejegyzesek.toString());
+
+        nepszeru();
+    }
+
+    private static void nepszeru() {
+        int topLike = 0;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok() > topLike){
+                topLike = bejegyzesek.get(i).getLikeok();
+            }
+        }
+        System.out.printf("A legtöbb like: %d", topLike);
+    }
+
+    private static void szovegKeres() {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Kérem adjon meg egy szöveget: ");
+        String szoveg = sc.nextLine();
+
+
     }
 
     private static void likeOsztas() {
@@ -71,6 +94,7 @@ public class Main {
 
         System.out.print("Kérem adja meg hány bejegyzés legyen felvéve: ");
         int db = sc.nextInt();
+        sc.nextLine();
         for (int i = 0; i < db; i++) {
             System.out.print("Szerző: ");
             String szerzo = sc.nextLine();
