@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Main {
 
     private static List<Bejegyzes> bejegyzesek = new ArrayList<>();
+    private static List<Bejegyzes> bejegyzesek2 = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -47,6 +48,24 @@ public class Main {
         tobbLike();
         System.out.println("");
         kevesebbLike();
+        System.out.println("");
+        rendezes();
+    }
+
+    private static void rendezes() {
+        int index = 0;
+        int max = 0;
+        while(bejegyzesek2.size() != bejegyzesek.size()){
+            max = 0;
+            for (int i = 0; i < bejegyzesek.size(); i++) {
+                if (bejegyzesek.get(i).getLikeok()>max && !bejegyzesek2.contains(bejegyzesek.get(i))){
+                    index = i;
+                    max=bejegyzesek.get(i).getLikeok();
+                }
+            }
+            bejegyzesek2.add(bejegyzesek.get(index));
+        }
+        System.out.println(bejegyzesek2.toString());
     }
 
     private static void kevesebbLike() {
