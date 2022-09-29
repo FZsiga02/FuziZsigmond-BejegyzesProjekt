@@ -45,6 +45,20 @@ public class Main {
         nepszeru();
         System.out.println("");
         tobbLike();
+        System.out.println("");
+        kevesebbLike();
+    }
+
+    private static void kevesebbLike() {
+
+        int szamlalo = 0;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok() < 15){
+                szamlalo++;
+            }
+        }
+        System.out.printf("%d db bejegyzés kapott 15-nél kevesebb likeot", szamlalo);
+
     }
 
     private static void tobbLike() {
@@ -80,6 +94,7 @@ public class Main {
         System.out.print("Kérem adjon meg egy szöveget: ");
         String szoveg = sc.nextLine();
 
+        bejegyzesek.get(1).setTartalom(szoveg);
 
     }
 

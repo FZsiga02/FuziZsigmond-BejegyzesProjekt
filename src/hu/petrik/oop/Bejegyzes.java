@@ -48,6 +48,6 @@ public class Bejegyzes {
 
     @Override
     public String toString() {
-        return String.format("%s - %d - %s\nSzerkesztve: %s\n%s", this.szerzo, this.likeok, this.letrejott, this.szerkesztve, this.tartalom);
+        return String.format("%s - %d - %s\nSzerkesztve: %s\n%s\n", this.szerzo, this.likeok, this.letrejott, this.szerkesztve, this.tartalom);
     }
 }
