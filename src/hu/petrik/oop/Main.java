@@ -43,6 +43,24 @@ public class Main {
         System.out.println(bejegyzesek.toString());
 
         nepszeru();
+        System.out.println("");
+        tobbLike();
+    }
+
+    private static void tobbLike() {
+
+        boolean tobb = false;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok() > 35){
+                tobb = true;
+            }
+        }
+        if (tobb){
+            System.out.println("Van 35-nél több likeot szerző bejegyzés");
+        }else {
+            System.out.println("Nincs 35-nél több likeot szerző bejegyzés");
+        }
+
     }
 
     private static void nepszeru() {
